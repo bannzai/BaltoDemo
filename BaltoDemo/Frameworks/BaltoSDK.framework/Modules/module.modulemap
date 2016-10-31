@@ -1,0 +1,10 @@
+framework module BaltoSDK {
+  umbrella header "BaltoSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module BaltoSDK.Swift {
+    header "BaltoSDK-Swift.h"
+}
