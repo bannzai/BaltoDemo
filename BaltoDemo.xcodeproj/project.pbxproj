@@ -14,6 +14,7 @@
 		6CCFD4CB1DC7028B006FC0CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CCFD4C91DC7028B006FC0CC /* LaunchScreen.storyboard */; };
 		6CCFD4D61DC7028B006FC0CC /* BaltoDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCFD4D51DC7028B006FC0CC /* BaltoDemoTests.swift */; };
 		6CCFD4E11DC7028B006FC0CC /* BaltoDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCFD4E01DC7028B006FC0CC /* BaltoDemoUITests.swift */; };
+		6CCFD4F41DC704E6006FC0CC /* BaltoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CCFD4F31DC704E6006FC0CC /* BaltoSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		6CCFD4DC1DC7028B006FC0CC /* BaltoDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaltoDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CCFD4E01DC7028B006FC0CC /* BaltoDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaltoDemoUITests.swift; sourceTree = "<group>"; };
 		6CCFD4E21DC7028B006FC0CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CCFD4F31DC704E6006FC0CC /* BaltoSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaltoSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CCFD4F41DC704E6006FC0CC /* BaltoSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +80,7 @@
 		6CCFD4B41DC7028B006FC0CC = {
 			isa = PBXGroup;
 			children = (
+				6CCFD4F21DC704E6006FC0CC /* Frameworks */,
 				6CCFD4BF1DC7028B006FC0CC /* BaltoDemo */,
 				6CCFD4D41DC7028B006FC0CC /* BaltoDemoTests */,
 				6CCFD4DF1DC7028B006FC0CC /* BaltoDemoUITests */,
@@ -123,6 +127,15 @@
 				6CCFD4E21DC7028B006FC0CC /* Info.plist */,
 			);
 			path = BaltoDemoUITests;
+			sourceTree = "<group>";
+		};
+		6CCFD4F21DC704E6006FC0CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6CCFD4F31DC704E6006FC0CC /* BaltoSDK.framework */,
+			);
+			name = Frameworks;
+			path = BaltoDemo/Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,7 +362,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -389,7 +402,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -401,6 +414,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BaltoDemo/Frameworks",
+				);
 				INFOPLIST_FILE = BaltoDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.owata.BaltoDemo;
@@ -412,6 +429,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BaltoDemo/Frameworks",
+				);
 				INFOPLIST_FILE = BaltoDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.owata.BaltoDemo;
